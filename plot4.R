@@ -1,6 +1,6 @@
 # read the Household Power Compsumption file.  It assumes that it is loacted in your working directory
 print("Loading household_power_consumption.txt, please wait...")
-#hpc <- read.table("C:/Users/Raymond/Documents/coursera/EDA/household_power_consumption.txt", sep=";", header = TRUE, colClasses=colclasses,  na.strings="?")
+colclasses = c("character", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric")
 hpc <- read.table("household_power_consumption.txt", sep=";", header = TRUE, colClasses=colclasses,  na.strings="?")
 print("File loaded...")
 

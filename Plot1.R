@@ -1,6 +1,6 @@
-# read the Household Power Compsumption file.  It assumes that it is loacted in your working directory
+# read the Household Power Compsumption file.  It assumes that it is located in your working directory
 print("Loading household_power_consumption.txt, please wait...")
-#hpc <- read.table("C:/Users/Raymond/Documents/coursera/EDA/household_power_consumption.txt", sep=";", header = TRUE, colClasses=colclasses,  na.strings="?")
+colclasses = c("character", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric")
 hpc <- read.table("household_power_consumption.txt", sep=";", header = TRUE, colClasses=colclasses,  na.strings="?")
 print("File loaded...")
 
@@ -17,4 +17,4 @@ hpc2 <- transform(hpc2, Datetime = strptime(hpc2$Datetime, format="%Y-%m-%d %H:%
 png(file = "plot1.png")
 hist(hpc2$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", col="red", breaks=12, xlim=c(0,6))
 dev.off()
-print("Plot1.png created")
+print("Plot1.png created") 
